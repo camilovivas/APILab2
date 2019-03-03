@@ -166,7 +166,9 @@ public class Main {
 		
 		case 6:
 		
-		exit;
+			System.out.println("======================================================================" );
+			System.out.println("                             BYE BYE...");
+			System.out.println("======================================================================" );
 		
 		break;
 		
