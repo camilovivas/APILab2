@@ -21,165 +21,185 @@ public class Main {
 		
 	}
 	
-		public void showMenu(){
-			System.out.println("======================================================================" );
-			System.out.println("              Bienvenido al menu del Zoologico de Cali");
-			System.out.println("======================================================================\n" );
-			System.out.println("Elija la accion que desea realizar: \n\n1. Eliminar un canguro. \n2. Crear canguro. \n3.Cambiar canguro de ambiente. \n4. Ver los canguros cuyos nombres empiezan y terminan en vocal.\n5. Ver un reporte de las fechas de vacunacion.\n6. Salir."); // cuando cree el canguro pregunte en que ambiente lo quiere
-			System.out.println(" ");
+	public void showMenu(){
+			int repeticiones = 0;
+			while (repeticiones!=6){
+				System.out.println("======================================================================" );
+				System.out.println("              Bienvenido al menu del Zoologico de Cali");
+				System.out.println("======================================================================\n" );
+				System.out.println("Elija la accion que desea realizar: \n\n1. Eliminar un canguro. \n2. Crear canguro. \n3. Cambiar canguro de ambiente. \n4. Ver los canguros cuyos nombres empiezan y terminan en vocal.\n5. Ver un reporte de las fechas de vacunacion.\n6. Salir."); // cuando cree el canguro pregunte en que ambiente lo quiere
+				System.out.println(" ");
 		
-		int opcionElegida = entrada.nextInt();
+			int opcionElegida = entrada.nextInt();
+			//System.out.println("Opcion elegida -> "+opcionElegida);
 		
-		switch (opcionElegida){
-		
-		case 1:
-			System.out.println("A continuacion se encuentran todos los canguros existentes en cada ambiente, por favor busque el que desea eliminar..." );
-			System.out.println(" ");
-			System.out.println("Los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().ShowNameCanguro());
-			System.out.println(" ");
-			System.out.println("Los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().ShowNameCanguro());
-			System.out.println(" ");
-			System.out.println("Los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().ShowNameCanguro());
-			System.out.println(" ");
+			switch (opcionElegida){
+				case 1:
+					System.out.println("A continuacion se encuentran todos los canguros existentes en cada ambiente, por favor busque el que desea eliminar..." );
+					System.out.println(" ");
+					System.out.println("Los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().ShowNameCanguro());
+					System.out.println(" ");
+					System.out.println("Los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().ShowNameCanguro());
+					System.out.println(" ");
+					System.out.println("Los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().ShowNameCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().ShowNameCanguro());
+					System.out.println(" ");
 	
-			System.out.println("Introduzca el nombre del canguro a eliminar");
-			String nameE = entrada.nextLine();
+					System.out.println("Introduzca el nombre del canguro a eliminar");
+					String nameE = entrada.next();
 			
-			if (nameE == relacion.getAustralia().getZ1().getA1().getC1().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA1().setC1(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA1().getC2().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA1().setC2(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA1().getC3().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA1().setC3(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA2().getC1().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA2().setC1(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA2().getC2().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA2().setC2(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA2().getC3().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA2().setC3(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA3().getC1().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA3().setC1(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA3().getC2().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA3().setC2(null);
-			}
-			else if (nameE == relacion.getAustralia().getZ1().getA3().getC3().ShowNameCanguro()){
-				relacion.getAustralia().getZ1().getA3().setC3(null);
-			}
-			else{
-				System.out.println("ingrese un nombre existente");
-				}
+					if (nameE == relacion.getAustralia().getZ1().getA1().getC1().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA1().setC1(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA1().getC2().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA1().setC2(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA1().getC3().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA1().setC3(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA2().getC1().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA2().setC1(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA2().getC2().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA2().setC2(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA2().getC3().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA2().setC3(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA3().getC1().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA3().setC1(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA3().getC2().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA3().setC2(null);
+					}
+					else if (nameE == relacion.getAustralia().getZ1().getA3().getC3().ShowNameCanguro()){
+						relacion.getAustralia().getZ1().getA3().setC3(null);
+					}
+					else{
+					System.out.println("ingrese un nombre existente");
+					}
 			
-			System.out.println("Se ha eliminado el canguro con exito");
+					System.out.println("Se ha eliminado el canguro con exito");
 		
-		break;
+				break;
 		
-		
-		case 2:
-			System.out.println("introduce el nombre del canguro...");
-			String name = entrada.next(); //relacion.getAustralia().getZ1().getA3().getC1().setName()
-		
-			System.out.println("introduce la estatura del canguro...");
-			double height = entrada.nextInt();
-		
-			System.out.println("introduce el peso del canguro...");
-			double weight = entrada.nextInt();
-		
-			System.out.println("introduzca 1 = masculino o 2 = femenino");
-			int sex = entrada.nextInt();
-		
-			System.out.println("introduce el dia de nacimiento...");
-			int day = entrada.nextInt();
-		
-			System.out.println("introduce el mes de nacimiento...");
-			int month = entrada.nextInt();
-		
-			System.out.println("introduce el año de nacimiento...");
-			int year = entrada.nextInt();
-		
-		
-			System.out.println("Se ha creado el canguro con exito");
-		
-		break;
-		
-		
-		case 3:
-			System.out.println("a continuacion se encuentran todos los canguros existentes clasificados por ambientes, por favor busque el que desea cambiar..." );
-			System.out.println(" ");
-			System.out.println("los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().ShowInfoCanguro());
-			System.out.println(" ");
-			System.out.println("los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().ShowInfoCanguro());
-			System.out.println(" ");
-			System.out.println("los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().ShowInfoCanguro());
-			System.out.println(" ");
-		
-		break;
-		
-		
-		case 4:
-			System.out.println("las siguientes canguros son los que tienen una vocal en su nombre al iniciar y al terminar:");
-			//System.out.println("los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().vowel());
-			//System.out.println(" ");
-			//System.out.println("los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().vowel());
-			//System.out.println(" ");
-			//System.out.println("los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().vowel());
-			//System.out.println("Los canguros que tienen una vocal al inicio y al final de su nomre son:");
+					//crear canguro
+				case 2:
+					System.out.println("introduce el ambiente al que quieres que pertenezca el nuevo canguro...");//mensaje = 
+					int ambiente = entrada.nextInt();//por relaciones nos vamos al ambiente que ingrese
 			
-		if (relacion.getAustralia().getZ1().getA1().getC1().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC1().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA1().getC2().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC2().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA1().getC3().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC3().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA2().getC1().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC1().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA2().getC2().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC2().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA2().getC3().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC3().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA3().getC1().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC1().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA3().getC2().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC2().getName());
-		}
-		else if (relacion.getAustralia().getZ1().getA3().getC3().vowel() == true){
-		System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC3().getName());
-		}
-		else{
-			System.out.println("No hay canguros con nombre que inicie y termine en vocal");
-		}
+			
+					System.out.println("introduce el nombre del canguro...");
+					String name = entrada.next(); 
+			
 		
-		break;
+					System.out.println("introduce la estatura del canguro...");
+					double height = entrada.nextDouble();
 		
-		case 6:
+					System.out.println("introduce el peso del canguro...");
+					double weight = entrada.nextDouble();
 		
-			System.out.println("======================================================================" );
-			System.out.println("                             BYE BYE...");
-			System.out.println("======================================================================" );
+					System.out.println("introduzca 1 = masculino o 2 = femenino");
+					int sex = entrada.nextInt();
+				
+					System.out.println("inngrese el tipo de sangre");
+					String bloodType = entrada.next();
+			
+					System.out.println("introduzca el numero de dias que lleva de vida");
+					int dayBorn = entrada.nextInt();
 		
-		break;
+					System.out.println("introduce el dia de nacimiento...");
+					int day = entrada.nextInt();
 		
-		default: 
+					System.out.println("introduce el mes de nacimiento...");
+					int month = entrada.nextInt();
 		
-			System.out.println("la opcion ingresada no es valida");
+					System.out.println("introduce el año de nacimiento...");
+					int year = entrada.nextInt();
+				
+					Fecha fn = new Fecha (day, month, year);
+					if (relacion.getAustralia().getZ1().getA1().verificarSiExiten() == true){
+					Canguro cn = new Canguro (name, height, weight,sex, bloodType, weight/Math.pow (height, 2), fn);
+					}
+					System.out.println("Se ha creado el canguro con exito");
 		
+				break;
+		
+		
+				case 3:
+					System.out.println("a continuacion se encuentran todos los canguros existentes clasificados por ambientes, por favor busque el que desea cambiar..." );
+					System.out.println(" ");
+					System.out.println("los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().ShowInfoCanguro());
+					System.out.println(" ");
+					System.out.println("los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().ShowInfoCanguro());
+					System.out.println(" ");
+					System.out.println("los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().ShowInfoCanguro()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().ShowInfoCanguro());
+					System.out.println(" ");
+		
+				break;
+		
+		
+				case 4:
+					System.out.println("las siguientes canguros son los que tienen una vocal en su nombre al iniciar y al terminar:");
+					//System.out.println("los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().vowel());
+					//System.out.println(" ");
+					//System.out.println("los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().vowel());
+					//System.out.println(" ");
+					//System.out.println("los canguros del ambiente 3 son:"+"\n"+relacion.getAustralia().getZ1().getA3().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA3().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA3().getC3().vowel());
+					//System.out.println("Los canguros que tienen una vocal al inicio y al final de su nomre son:");
+			
+					if (relacion.getAustralia().getZ1().getA1().getC1().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC1().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA1().getC2().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC2().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA1().getC3().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA1().getC3().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA2().getC1().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC1().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA2().getC2().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC2().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA2().getC3().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA2().getC3().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA3().getC1().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC1().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA3().getC2().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC2().getName());
+					}
+					else if (relacion.getAustralia().getZ1().getA3().getC3().vowel() == true){
+						System.out.println(" "+relacion.getAustralia().getZ1().getA3().getC3().getName());
+					}
+					else{
+					System.out.println("No hay canguros con nombre que inicie y termine en vocal");
+					}
+		
+				break;
+		
+				case 5:
+		
+				break;
+		
+				case 6:
+		
+					System.out.println("======================================================================" );
+					System.out.println("                             BYE BYE...");
+					System.out.println("======================================================================\n\n" );
+					repeticiones = 6;
+				break;
+		
+				default: 
+				System.out.println("___________________________________________________");
+				System.out.println("la opcion ingresada no es valida");
+				System.out.println("___________________________________________________\n\n");
 			}
 		
 		}
-	
+	}
 
 	
 	public void showMessageExample(){
