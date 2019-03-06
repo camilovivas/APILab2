@@ -11,6 +11,7 @@ public class Canguro{
 	private double imc;
 	private double areaCanguro;
 	
+	
 	//Relacion
 	private Fecha birhDate;
 	
@@ -136,4 +137,24 @@ public class Canguro{
 		}
 		return mensaje;
 	}
-}
+	
+	//public String carcularFecha (){
+		//String mensaje = (" ");
+	
+		//if (dayBorn > 7){
+		
+			//mensaje = ("las semanas del canguro son")+dayBorn/7;
+		
+		//}
+		//else if (dayBorn < 7){
+			
+			//mensaje = ("el canguro tiene menos de una semana");
+			
+		//}
+	
+		//return mensaje;
+	
+	//}
+	
+	
+}	

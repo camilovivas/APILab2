@@ -104,9 +104,7 @@ public class ZonaCanguro{
 		return mensaje;
 		
 	}
+
 	
-	public String addCanguro (){
-		String mensaje =(" ");
-		return mensaje;
-	}
+
 }

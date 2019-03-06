@@ -57,5 +57,11 @@ public class Ambiente{
 		return mensaje;
 		
 	}
-	
+	public boolean verificarSiExiten(){
+		boolean existe = false;
+		if (getC1() != null || getC2() != null || getC3() != null ){
+			existe = true;
+		}
+	return existe;
+	}
 }
