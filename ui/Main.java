@@ -1,6 +1,6 @@
 package ui;
 
-import modelo.*;
+import model.*;
 import java.util.*;
 
 public class Main {
@@ -87,7 +87,38 @@ public class Main {
 					System.out.println("introduce el ambiente al que quieres que pertenezca el nuevo canguro...");//mensaje = 
 					int ambiente = entrada.nextInt();//por relaciones nos vamos al ambiente que ingrese
 			
+			if (ambiente == 1 && relacion.getAustralia().getZ1().getA1().verificarSiExiten() == true){
+					System.out.println("introduce el nombre del canguro...");
+					String name = entrada.next(); 
 			
+					System.out.println("introduce la estatura del canguro...");
+					double height = entrada.nextDouble();
+		
+					System.out.println("introduce el peso del canguro...");
+					double weight = entrada.nextDouble();
+		
+					System.out.println("introduzca 1 = masculino o 2 = femenino");
+					int sex = entrada.nextInt();
+				
+					System.out.println("inngrese el tipo de sangre");
+					String bloodType = entrada.next();
+			
+					System.out.println("introduzca el numero de dias que lleva de vida");
+					int dayBorn = entrada.nextInt();
+		
+					System.out.println("introduce el dia de nacimiento...");
+					int day = entrada.nextInt();
+		
+					System.out.println("introduce el mes de nacimiento...");
+					int month = entrada.nextInt();
+		
+					System.out.println("introduce el año de nacimiento...");
+					int year = entrada.nextInt();
+					Fecha fn = new Fecha(day, month, year);
+					Canguro cn = new Canguro (name, height, weight,sex, bloodType, weight/Math.pow (height, 2), fn);
+					System.out.println("Se ha creado el canguro con exito");
+			}
+			else if (ambiente == 2 && relacion.getAustralia().getZ1().getA2().verificarSiExiten() == true){
 					System.out.println("introduce el nombre del canguro...");
 					String name = entrada.next(); 
 			
@@ -115,13 +146,43 @@ public class Main {
 		
 					System.out.println("introduce el año de nacimiento...");
 					int year = entrada.nextInt();
-				
-					Fecha fn = new Fecha (day, month, year);
-					if (relacion.getAustralia().getZ1().getA1().verificarSiExiten() == true){
+					Fecha fn = new Fecha(day, month, year);
 					Canguro cn = new Canguro (name, height, weight,sex, bloodType, weight/Math.pow (height, 2), fn);
-					}
 					System.out.println("Se ha creado el canguro con exito");
+			}
+			else if (ambiente == 3 && relacion.getAustralia().getZ1().getA3().verificarSiExiten() == true){
+					System.out.println("introduce el nombre del canguro...");
+					String name = entrada.next(); 
+			
 		
+					System.out.println("introduce la estatura del canguro...");
+					double height = entrada.nextDouble();
+		
+					System.out.println("introduce el peso del canguro...");
+					double weight = entrada.nextDouble();
+		
+					System.out.println("introduzca 1 = masculino o 2 = femenino");
+					int sex = entrada.nextInt();
+				
+					System.out.println("inngrese el tipo de sangre");
+					String bloodType = entrada.next();
+			
+					System.out.println("introduzca el numero de dias que lleva de vida");
+					int dayBorn = entrada.nextInt();
+		
+					System.out.println("introduce el dia de nacimiento...");
+					int day = entrada.nextInt();
+		
+					System.out.println("introduce el mes de nacimiento...");
+					int month = entrada.nextInt();
+		
+					System.out.println("introduce el año de nacimiento...");
+					int year = entrada.nextInt();
+					Fecha fn = new Fecha(day, month, year);
+					Canguro cn = new Canguro (name, height, weight,sex, bloodType, weight/Math.pow (height, 2), fn);
+				
+					System.out.println("Se ha creado el canguro con exito");
+			}
 				break;
 		
 		
@@ -140,6 +201,7 @@ public class Main {
 		
 				case 4:
 					System.out.println("las siguientes canguros son los que tienen una vocal en su nombre al iniciar y al terminar:");
+					System.out.println("funciona:"+relacion.vo());
 					//System.out.println("los canguros del ambiente 1 son:"+"\n"+relacion.getAustralia().getZ1().getA1().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA1().getC3().vowel());
 					//System.out.println(" ");
 					//System.out.println("los canguros del ambiente 2 son:"+"\n"+relacion.getAustralia().getZ1().getA2().getC1().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC2().vowel()+"\n"+relacion.getAustralia().getZ1().getA2().getC3().vowel());
