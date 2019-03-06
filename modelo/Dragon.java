@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class Dragon{
 	
 	//Atributos
@@ -103,5 +103,19 @@ public class Dragon{
 		haveVowels = false;
 		}			
 		return haveVowels;
+	}
+	
+	
+	public String printName(boolean haveVowels){
+		String name = (" ");
+		
+		if (haveVowels == true){
+			name = getName();
+			
+		}
+		else{
+			name = "no tiene vocales al inicio y al final";
+		}
+		return name;
 	}
 }

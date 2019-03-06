@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class ZonaCanguro{
 	
 	//Atributos
@@ -71,6 +71,9 @@ public class ZonaCanguro{
 		this.a3 = a3;
 	}
 	public double getFood(){
+		food += getA1().comida();
+		food += getA2().comida();
+		food += getA3().comida();
 		return food;
 	}
 	public void setFoot(double food){
@@ -94,7 +97,7 @@ public class ZonaCanguro{
 	}
 	
 	
-	public String showInfoZonaCanguro (){
+	public String showInfoZonaCanguro(){
 		String mensaje = (" ");
 		
 		mensaje += ("la temperatura es:"+"\n"+getTemperature());
@@ -104,7 +107,14 @@ public class ZonaCanguro{
 		return mensaje;
 		
 	}
+	public String vocalA(){
+		String mensaje = (" ");
+		mensaje += getA1().vCanguro();
+		mensaje += getA2().vCanguro();
+		mensaje += getA3().vCanguro();
+		
+		return mensaje;
+	}
 
-	
 
 }

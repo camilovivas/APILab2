@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class Canguro{
 	
 	//Atributos
@@ -122,6 +122,18 @@ public class Canguro{
 		}			
 		return haveVowels;
 	}
+	public String printName(boolean haveVowels){
+		String name = (" ");
+		
+		if (haveVowels == true){
+			name = getName();
+			
+		}
+		else{
+			name = "no tiene vocales al inicio y al final";
+		}
+		return name;
+	}
 	
 	public double calcularComida(){
 		double mensaje = (0.0);
@@ -155,6 +167,12 @@ public class Canguro{
 		//return mensaje;
 	
 	//}
-	
+	public void newCanguro(){
+		//setName;
+		//setSex;
+		//setWeigth;
+		//setBloodType;
+		//setBirhDate;
+	}
 	
 }	

@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class Zoo{
 	
 	//Atributos
@@ -44,5 +44,13 @@ public class Zoo{
 	}
 	public void setAustralia (Exhibicion australia) {
 		this.australia = australia;
+	}
+	
+	public String vo(){
+		String mensaje = (" ");
+		
+		mensaje += getAustralia().infoVo();
+		
+		return mensaje;	
 	}
 }

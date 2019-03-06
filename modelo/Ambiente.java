@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class Ambiente{
 	
 	//Atributos
@@ -64,4 +64,22 @@ public class Ambiente{
 		}
 	return existe;
 	}
+	public String vCanguro(){
+		String mensaje= (" ");
+			
+		mensaje += getC1().printName();
+		mensaje += getC2().printName();
+		mensaje += getC3().printName();
+		
+		return mensaje;
+
+	}
+	public double comida(){
+		double eat = 0;
+		eat += getC1().calcularComida();
+		eat += getC2().calcularComida();
+		eat += getC3().calcularComida();
+		return eat;
+	}
+	
 }

@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class Exhibicion{
 	
 	//Atributos
@@ -36,6 +36,15 @@ public class Exhibicion{
 	}
 	public void setZ2 (ZonaDragon z2) {
 		this.z2 = z2;
+	}
+	
+	public String infoVo(){
+		String mensaje = (" ");
+		
+		mensaje += ("los canguros con vocal al inicio y al final son:")+getZ1().vocalA();
+		mensaje +=  ("los dragones con vocal al inicio y al final son:")+getZ2().vocalD();
+		
+		return mensaje;
 	}
 }
 

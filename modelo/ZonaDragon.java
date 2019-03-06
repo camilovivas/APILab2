@@ -1,4 +1,4 @@
-package modelo;
+package model;
 public class ZonaDragon{
 	
 	//Atributos
@@ -58,4 +58,13 @@ public class ZonaDragon{
 	public void setD2 (Dragon d2) {
 		this.d2 = d2;
 	}
+	
+	public String vocalD(){
+		String mensaje = (" ");
+		mensaje += getD1().printName();
+		mensaje += getD2().printName();
+				
+		return mensaje;
+	}
+
 }
